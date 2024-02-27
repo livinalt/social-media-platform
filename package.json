@@ -1,0 +1,20 @@
+{
+  "name": "social-media-platform",
+  "version": "1.0.0",
+  "description": "A decentralized social media platform where users can create and share content in the form of NFTs representing multimedia assets such as images, videos, and audio clips",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1"
+  }
+}
