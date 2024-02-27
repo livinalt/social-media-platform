@@ -1,24 +1,12 @@
 // SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
-pragma solidity ^0.8.0;
+pragma solidity 0.8.20;
 
-import "@openzeppelin/contracts@5.0.1/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts@5.0.1/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts@5.0.1/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract BudyToken is ERC721, ERC721URIStorage, Ownable {
-    constructor(address initialOwner)
-        ERC721("BudyToken", "BTK")
-        Ownable(initialOwner)
-    {}
-
-    function safeMint(address to, uint256 tokenId, string memory uri)
-        public
-        onlyOwner
-    {
-        _safeMint(to, tokenId);
-        _setTokenURI(tokenId, uri);
-    }
+contract BudyToken is ERC721, ERC721URIStorage {
+    constructor() ERC721("BudyToken", "BTK") {}
 
     // The following functions are overrides required by Solidity.
 
