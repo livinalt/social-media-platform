@@ -17,3 +17,6 @@ contract BudyPlatformFactory {
     }
 }
 
+// Successfully verified contract BudyPlatformFactory on the block explorer.
+// https://sepolia.etherscan.io/address/0xe45F0f02957373A5ddB70594e56bbD540e9dF7d5#code
+

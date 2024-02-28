@@ -1,22 +1,24 @@
 import { ethers } from "hardhat";
 
 async function main() {
+
+  const owner = await ethers.getSigner();
   
-  // const budyToken = await ethers.deployContract("BudyToken");
-  // await budyToken.waitForDeployment();
+  const budyToken = await ethers.deployContract("BudyToken");
+  await budyToken.waitForDeployment();
 
   
-  // const budyPlatform = await ethers.deployContract("BudyPlatform");
-  // await budyPlatform.waitForDeployment();
+  const budyPlatform = await ethers.deployContract("BudyPlatform");
+  await budyPlatform.waitForDeployment();
  
   const BudyPlatformFactory = await ethers.deployContract("BudyPlatformFactory");
   await BudyPlatformFactory.waitForDeployment();
 
+  const factoryAddress = "0xe45F0f02957373A5ddB70594e56bbD540e9dF7d5"
 
-
-  // console.log(`BudyToken has been deployed to ${budyToken.target}`); // 0x38C09eF13F988BE3dB073CFD8e4ed874eeDD5acD
-  // console.log(`BudyPlatform has been deployed to ${budyPlatform.target}`);
-  console.log(`BudyPlatformFactory has been deployed to ${BudyPlatformFactory.target}`); // 0xD426581713Dd89ac11aC65Fa53ffAc89D7e024bC // 0x007209d5254d48793161e0ab5568ecd1dad001160f0706e710d8da38e466561a
+  // console.log(`BudyToken has been deployed to ${budyToken.target}`); // 0xe2bB3ee398EAAeCfad6f2D1aD61BB0BbE45097A5
+  console.log(`BudyPlatform has been deployed to ${ }`);
+  // console.log(`BudyPlatformFactory has been deployed to ${BudyPlatformFactory.target}`); // 0xe45F0f02957373A5ddB70594e56bbD540e9dF7d5 // 
 }
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
